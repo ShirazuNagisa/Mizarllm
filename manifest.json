@@ -1,0 +1,19 @@
+{
+  "id": "mizarllm-v1",
+  "version": "1.0.0",
+  "backend": {
+    "kind": "http",
+    "endpoint": "http://127.0.0.1:0",
+    "timeout_ms": 1500
+  },
+  "labels": {
+    "done": 11,
+    "needs_user": 4,
+    "stalled": 9,
+    "waiting": 8
+  },
+  "note": "Qwen3-1.7B + LoRA, Q4_K_M. 87.8% on holdout; stalled recall 65%. Four verdicts mapped onto state codes by this file, not by the kernel. endpoint port 0 means the host picks one and injects it.",
+  "file": "mizarllm-1.0.0-q4km.gguf",
+  "sha256": "5767c62c12c9f576bb813d4ba08567fc2a3a21d3b837c50b6ea8f87ac799435b",
+  "size_bytes": 1107408736
+}

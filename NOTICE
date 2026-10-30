@@ -1,0 +1,11 @@
+Mizarllm
+Copyright 2026 ShirazuNagisa
+
+This product includes model weights derived from Qwen3-1.7B
+(https://huggingface.co/Qwen/Qwen3-1.7B), Copyright 2025 Alibaba Cloud,
+licensed under the Apache License, Version 2.0. A copy of that license is
+included at LICENSES/Qwen3-1.7B.txt.
+
+The fine-tune (LoRA adapter, merged weights and the Q4_K_M quantisation)
+and the contents of this repository are released under the Apache License,
+Version 2.0. See LICENSE.
