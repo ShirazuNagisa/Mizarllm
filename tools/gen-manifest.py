@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """Write `manifest.json` and `SHA256SUMS` for a built GGUF.
 
-    python tools/gen-manifest.py --gguf build/mizarllm-1.0.0-q4km.gguf --version 1.0.0
+    python tools/gen-manifest.py --gguf build/mizarllm-v1-q4km.gguf --version v1
+
+`--version` is the release tag: model releases are numbered `v1`, `v2`, and the
+host uses that string both to compare versions and to build the download URL.
 
 The manifest is what AGI Mizar reads to decide *what* this model is: its id, its
 version, the four labels it answers with, and the endpoint its host will inject.
@@ -41,6 +44,10 @@ def main() -> int:
     ap.add_argument("--id", default="mizarllm-v1")
     ap.add_argument("--out", default=".")
     args = ap.parse_args()
+
+    if not args.version.startswith("v"):
+        print(f"!! version {args.version!r} is not a release tag (expected v1, v2, …)", file=sys.stderr)
+        return 1
 
     if not os.path.exists(args.gguf):
         print(f"!! no such file: {args.gguf}", file=sys.stderr)
