@@ -17,10 +17,12 @@ judgement is this model's whole job. Everything else stays a rule (see [`docs/st
 
 ## Use it
 
-The weights are **not** in this repository (GitHub caps files at 100 MB). They ship as release assets:
+The weights are **not** in this repository (GitHub caps files at 100 MB). They ship as release assets
+under the `v1` tag (model file 1.0.0):
 
 ```sh
-gh release download v1.0.0 --repo ShirazuNagisa/Mizarllm --pattern '*.gguf'   # or download by hand
+gh release download v1 --repo ShirazuNagisa/Mizarllm \
+  --pattern '*.gguf' --pattern 'SHA256SUMS'   # or download by hand
 sha256sum -c SHA256SUMS
 ```
 
